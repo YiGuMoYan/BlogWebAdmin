@@ -1,13 +1,10 @@
 <template>
-  <h1>我是home</h1>
+  <h1>我是user</h1>
 </template>
 
 <script>
 export default {
-  name: 'HomeView',
-  data () {
-    return {}
-  }
+  name: 'UserView'
 }
 </script>
 
