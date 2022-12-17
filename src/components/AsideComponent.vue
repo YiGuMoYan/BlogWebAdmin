@@ -75,7 +75,9 @@ export default {
   },
   methods: {
     clickMenu (item) {
-      this.$router.push(item.path)
+      if (this.$route.path !== item.path && !(this.$route.path === '/home' && item.path === '/')) {
+        this.$router.push(item.path)
+      }
     }
   },
   computed: {
