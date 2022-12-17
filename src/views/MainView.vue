@@ -1,7 +1,9 @@
 <template>
   <div>
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
+      <el-aside width="200px">
+        <aside-component/>
+      </el-aside>
       <el-container>
         <el-header>Header</el-header>
         <el-main>
@@ -13,8 +15,11 @@
 </template>
 
 <script>
+import AsideComponent from '@/components/AsideComponent.vue'
+
 export default {
-  name: 'MainView'
+  name: 'MainView',
+  components: { AsideComponent }
 }
 </script>
 
