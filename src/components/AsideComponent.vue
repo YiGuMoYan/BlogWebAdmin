@@ -6,7 +6,7 @@
            text-color="#fff"
            active-text-color="#ffd04b">
     <h3>通用后台管理</h3>
-    <el-menu-item v-for="item in noChildren" :key="item.name" :index="item.name">
+    <el-menu-item @click="clickMenu(item)" v-for="item in noChildren" :key="item.name" :index="item.name">
       <i :class="'el-icon-' + item.icon"></i>
       <span slot="title">{{ item.label }}</span>
     </el-menu-item>
@@ -16,7 +16,7 @@
         <span slot="title">{{ item.label }}</span>
       </template>
       <el-menu-item-group v-for="subItem in item.children" :key="subItem.path">
-        <el-menu-item :index="subItem.path">{{ subItem.label }}</el-menu-item>
+        <el-menu-item @click="clickMenu(subItem)" :index="subItem.path">{{ subItem.label }}</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
   </el-menu>
@@ -73,7 +73,11 @@ export default {
       ]
     }
   },
-  methods: {},
+  methods: {
+    clickMenu (item) {
+      this.$router.push(item.path)
+    }
+  },
   computed: {
     // 没有子菜单
     noChildren () {
@@ -95,6 +99,7 @@ export default {
 
 .el-menu {
   height: 100vh;
+
   h3 {
     color: #fff;
     text-align: center;

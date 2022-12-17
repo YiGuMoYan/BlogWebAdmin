@@ -1,10 +1,10 @@
 <template>
-  <h1>user</h1>
+  <h1>pageOne</h1>
 </template>
 
 <script>
 export default {
-  name: 'UserView'
+  name: 'PageOneView'
 }
 </script>
 
