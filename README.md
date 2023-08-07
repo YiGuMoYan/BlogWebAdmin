@@ -1,4 +1,5 @@
-# admin
+# BlogWebAdmin
+基于 Vue 的博客管理系统前端。
 
 ## Project setup
 ```
